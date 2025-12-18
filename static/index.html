@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медцентр - Главная</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка -->
+        <header class="header">
+            <h1>🏥 Медицинский Центр</h1>
+            <p class="subtitle">Мануальная терапия и остеопатия</p>
+        </header>
+
+        <!-- Информация о враче -->
+        <section class="doctor-info">
+            <div class="doctor-card">
+                <div class="doctor-avatar">👨‍⚕️</div>
+                <div class="doctor-details">
+                    <h2>Иванов Иван Иванович</h2>
+                    <p class="doctor-specialty">Врач-остеопат, мануальный терапевт</p>
+                    <p class="doctor-experience">Опыт работы: 15 лет</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- О центре -->
+        <section class="about">
+            <h3>📋 О центре</h3>
+            <p>Специализируемся на лечении заболеваний опорно-двигательного аппарата. Используем современные методы мануальной терапии и остеопатии.</p>
+        </section>
+
+        <!-- Наши преимущества -->
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h4>Опытный специалист</h4>
+                <p>15 лет практики</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💯</div>
+                <h4>Эффективность</h4>
+                <p>Результат с первого сеанса</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h4>Индивидуальный подход</h4>
+                <p>К каждому пациенту</p>
+            </div>
+        </section>
+
+        <!-- Кнопки навигации -->
+        <section class="navigation">
+            <a href="services.html" class="btn btn-primary">
+                📋 Наши услуги
+            </a>
+            <a href="booking.html" class="btn btn-success">
+                📅 Записаться на приём
+            </a>
+            <a href="my-bookings.html" class="btn btn-secondary">
+                📊 Мои записи
+            </a>
+        </section>
+
+        <!-- Контакты -->
+        <section class="contacts">
+            <h3>📞 Контакты</h3>
+            <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <span>г. Москва, ул. Примерная, д. 1</span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">⏰</span>
+                <span>Пн-Сб: 09:00 - 20:00</span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">💬</span>
+                <button class="btn-contact" onclick="contactDoctor()">Написать врачу</button>
+            </div>
+        </section>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <p>© 2025 Медицинский Центр</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
 
