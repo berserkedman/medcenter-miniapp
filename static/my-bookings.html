@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои записи</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка -->
+        <header class="header">
+            <a href="index.html" class="back-btn">← Назад</a>
+            <h1>📊 Мои записи</h1>
+        </header>
+
+        <!-- Список записей -->
+        <section class="bookings-list" id="bookingsList">
+            <div class="loading">Загрузка...</div>
+        </section>
+
+        <!-- Если нет записей -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <div class="empty-icon">📅</div>
+            <h3>У вас пока нет записей</h3>
+            <p>Запишитесь на приём к специалисту</p>
+            <a href="booking.html" class="btn btn-primary">
+                📅 Записаться
+            </a>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            loadMyBookings();
+        });
+    </script>
+</body>
+</html>
 
