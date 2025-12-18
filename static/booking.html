@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись на приём</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка -->
+        <header class="header">
+            <a href="index.html" class="back-btn">← Назад</a>
+            <h1>📅 Запись на приём</h1>
+        </header>
+
+        <!-- Форма записи -->
+        <form class="booking-form" id="bookingForm">
+            
+            <!-- Шаг 1: Выбор услуги -->
+            <div class="form-step active" id="step1">
+                <h3>Выберите услугу</h3>
+                <div class="services-grid" id="servicesGrid">
+                    <!-- Заполнится из JS -->
+                </div>
+                <button type="button" class="btn btn-primary" onclick="nextStep(2)">
+                    Далее →
+                </button>
+            </div>
+
+            <!-- Шаг 2: Выбор даты -->
+            <div class="form-step" id="step2">
+                <h3>Выберите дату</h3>
+                <input type="date" id="bookingDate" class="form-input" required>
+                <div class="step-buttons">
+                    <button type="button" class="btn btn-secondary" onclick="prevStep(1)">
+                        ← Назад
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="loadTimeSlots()">
+                        Далее →
+                    </button>
+                </div>
+            </div>
+
+            <!-- Шаг 3: Выбор времени -->
+            <div class="form-step" id="step3">
+                <h3>Выберите время</h3>
+                <div class="time-slots" id="timeSlots">
+                    <!-- Заполнится из JS -->
+                </div>
+                <div class="step-buttons">
+                    <button type="button" class="btn btn-secondary" onclick="prevStep(2)">
+                        ← Назад
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="nextStep(4)">
+                        Далее →
+                    </button>
+                </div>
+            </div>
+
+            <!-- Шаг 4: Подтверждение -->
+            <div class="form-step" id="step4">
+                <h3>Подтверждение</h3>
+                <div class="booking-summary" id="bookingSummary">
+                    <!-- Заполнится из JS -->
+                </div>
+                <div class="step-buttons">
+                    <button type="button" class="btn btn-secondary" onclick="prevStep(3)">
+                        ← Назад
+                    </button>
+                    <button type="submit" class="btn btn-success btn-large">
+                        ✅ Записаться
+                    </button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            loadServicesForBooking();
+            setMinDate();
+        });
+    </script>
+</body>
+</html>
 
