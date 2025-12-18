@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка -->
+        <header class="header">
+            <a href="index.html" class="back-btn">← Назад</a>
+            <h1>⚙️ Админ-панель</h1>
+        </header>
+
+        <!-- Статистика -->
+        <section class="admin-stats">
+            <div class="stat-card">
+                <div class="stat-value" id="todayBookings">0</div>
+                <div class="stat-label">Записей сегодня</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="weekBookings">0</div>
+                <div class="stat-label">Всего записей</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalRevenue">0 ₽</div>
+                <div class="stat-label">Общий доход</div>
+            </div>
+        </section>
+
+        <!-- Табы -->
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('all')">Все записи</button>
+            <button class="tab" onclick="switchTab('today')">Сегодня</button>
+            <button class="tab" onclick="switchTab('upcoming')">Предстоящие</button>
+        </div>
+
+        <!-- Список всех записей -->
+        <section class="admin-bookings" id="adminBookings">
+            <div class="loading">Загрузка...</div>
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            checkAdminAccess();
+            loadAdminData();
+        });
+    </script>
+</body>
+</html>
 
