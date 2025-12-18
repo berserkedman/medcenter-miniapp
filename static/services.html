@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка -->
+        <header class="header">
+            <a href="index.html" class="back-btn">← Назад</a>
+            <h1>📋 Наши услуги</h1>
+        </header>
+
+        <!-- Список услуг -->
+        <section class="services-list" id="servicesList">
+            <!-- Заполнится из JavaScript -->
+        </section>
+
+        <!-- Кнопка записи -->
+        <div class="bottom-action">
+            <a href="booking.html" class="btn btn-primary btn-large">
+                📅 Записаться на приём
+            </a>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            loadServices();
+        });
+    </script>
+</body>
+</html>
 
